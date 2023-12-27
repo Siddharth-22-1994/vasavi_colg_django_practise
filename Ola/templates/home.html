@@ -1,0 +1,68 @@
+{% extends 'base.html' %} {% load static %}
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1" />-->
+<!--  <head>-->
+<!--    <meta charset="UTF-8" />-->
+<!--    <title>Title</title>-->
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="{% static 'css/mycss.css'%}">-->
+<!--    <style>-->
+<!--&lt;!&ndash;  body&ndash;&gt;-->
+<!--&lt;!&ndash;      {&ndash;&gt;-->
+<!--&lt;!&ndash;            background-color:grey;&ndash;&gt;-->
+<!--&lt;!&ndash;      }&ndash;&gt;-->
+
+<!--  #title h2-->
+<!--      {-->
+<!--            margin-left:500px;-->
+<!--      }-->
+
+<!--    </style>-->
+<!--  </head>-->
+<!--  <body>-->
+
+{% block content %}
+
+<!--  <div id="menu-outer">-->
+<!--  <ul>-->
+<!--    <li>Home</li>-->
+<!--    <li>About</li>-->
+<!--    <li>Contact</li>-->
+<!--    <li>Services</li>-->
+<!--  </ul>-->
+
+<!--  </div>-->
+
+<div id="title">
+  <h2 class="title">Please Subscribe here</h2>
+</div>
+<br />
+{% comment %}
+<button><a href="{% url 'contact' name place age%}">Contact</a></button>
+{%endcomment %}
+
+<h4>Hello {{ name }}</h4>
+
+<form style="margin-left: 520px" action="contact" method="post">
+  {% csrf_token %}
+  <label for="Name">Name</label>
+  <input type="text" id="Name" name="Name" /><br /><br />
+  <label for="Age">Age</label>
+  <input type="number" id="Age" name="Age" /><br /><br />
+  <label for="Place">Place</label>
+  <input type="text" id="Place" name="Place" /><br /><br />
+  <input type="submit" style="margin-left: 80px" />
+</form>
+<img src="{% static 'images/bird.jpg' %}" height="300" width="300" />
+
+<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4" />
+  <source src="movie.ogg" type="video/ogg" />
+</video>
+
+{% endblock %}
+
+<!--  </body>-->
+<!--</html>-->

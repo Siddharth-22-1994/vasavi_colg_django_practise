@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <h3>Welcome to data</h3>
+    <h3><a href="{% url 'createform' %}">Add User</a></h3>
+    <table border="2">
+      <tr>
+        <th>Name</th>
+        <th>Id</th>
+        <th>Email</th>
+        <th>Salary</th>
+        <th>Process</th>
+      </tr>
+      {% for val in data %}
+      <tr>
+        <td>{{ val.E_name }}</td>
+        <td>{{ val.E_id }}</td>
+        <td>{{ val.E_email }}</td>
+        <td>{{ val.E_salary }}</td>
+        <td><a href="{% url 'update' val.id %}">Update</a></td>
+        <td><a href="{% url 'delete' val.id %}">Delete</a></td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

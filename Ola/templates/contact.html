@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block content %} {% comment %}
+<h2>contact page</h2>
+{% endcomment %} {% comment %}
+<h4>Welcome {{ name }}</h4>
+<h4>Welcome {{ age }}</h4>
+{% endcomment %}
+
+<h3>Data from databse</h3>
+<div class="container-fluid">
+  <div class="row">
+    {% for val in data %}
+    <div class="col-lg-4">
+      <h5>{{ val.name }}</h5>
+      <h5>{{ val.age }}</h5>
+      <h5>{{ val.emp_id }}</h5>
+      <h5>{{ val.salary }}</h5>
+      <img src="{{ val.image.url }}" height="300" width="300" />
+    </div>
+    {%endfor %}
+  </div>
+</div>
+{% endblock %}

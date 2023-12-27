@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <h3>Welcome to CharCounter</h3>
+    <form method="post">
+      {% csrf_token %}
+      <label>Enter the text</label><br />
+      <textarea name="clienttext" rows="7" cols="40">{{text}}</textarea><br />
+      <input type="submit" value="submit" />
+    </form>
+
+    {% if text %}
+    <h4>The Satistics are</h4>
+    <div>
+      <p>Charcter count:</p>
+      <p>{{char_length}}</p>
+      <p>Word count:</p>
+      <p>{{words}}</p>
+    </div>
+    {% endif %}
+  </body>
+</html>

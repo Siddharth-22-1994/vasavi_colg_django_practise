@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Welcome {{ name1 }} !!</h2>
+    <h2>{{ age }} <br />{{ phone }} <br />{{ place }}</h2>
+
+    <form method="post">
+      {% csrf_token %}
+      <label>Name</label>
+      <input type="text" name="name" placeholder="Name" /><br />
+      <label>Age</label>
+      <input type="text" name="age" placeholder="Age" /><br />
+      <input type="submit" value="submit" />
+    </form>
+
+    <h2>Data from Form</h2>
+    <p>{{ fname }}</p>
+    <p>{{ fage }}</p>
+  </body>
+</html>

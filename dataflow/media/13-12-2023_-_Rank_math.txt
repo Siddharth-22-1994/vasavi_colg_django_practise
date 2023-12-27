@@ -1,0 +1,31 @@
+Url optimization:
+  
+  page address
+  path
+  permalink
+  slug
+  web page address
+  web page
+  url
+
+http://abc.com/cake-shop
+
+Rules:
+
+1. Primary keyword only should be present in Url
+2. Lower case letters only allowed
+3. No special characters allowed except hypen(-)
+4. numbers and date not allowed
+
+
+
+cake-shop-in-coimbatore
+
+
+canonical tag
+
+
+
+
+
+   
